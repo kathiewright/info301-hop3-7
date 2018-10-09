@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition
+      Chapter 3
+      Hands-on Project 3-3
+
+      Author: 
+      Date:   
+
+      Filename: index.htm
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+   <title>Hands-on Project 3-7</title>
+   <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+   <div id="container">
+      <header>
+         <h1>
+            <img src="https://cdn.glitch.com/dc6cdffa-9326-4ec5-9b22-a5083b08f205%2Fcivic.PNG?1539104350814" width="293" height="118" alt="Holloway Hall" title="" />
+            <span>Car Price Estimator</span>
+         </h1>
+      </header> 
+   </div>
+      
+   <article>
+     
+      <form>
+         
+           <fieldset class = "makers">
+                 <legend><span>Pick a Car Make</span></legend>	
+            <input type="radio"  id="optKia" value="18500" name = "carMakers"/>Kia (Base Price:  $18,500)<br/><br/>
+            <input type="radio"  id="optMazda" value="20950" name = "carMakers"/>Mazda (Base Price:  $20,950)<br/><br/>
+            <input type="radio"  id="optToyota" value="21300" name = "carMakers"/>Toyota (Base Price:  $21,300)<br/><br/>
+            <input type="radio"  id="optHonda" value="22400" name = "carMakers"/>Honda (Base Price:  $22,400)<br/><br/> 			
+           </fieldset>
+           <br>
+           <fieldset class="extras">
+              <legend><span>Customize Your Ride</span></legend>
+              <input type="checkbox" id="chkTrim"/>
+              <label for="chkTrim">Deluxe Trim Package (+4%)</label>
+              <input type="checkbox" id="chkSound"/>
+              <label for="chkSound">Enhanced Sound System (+2.5%)</label>
+              <input type="checkbox" id="chkGPS"/>
+              <label for="fchkGPS">Onboard GPS (+1.5%)</label>
+           </fieldset>
+        <br>
+           <fieldset class = "regState" >
+              <legend><span>State Sales Tax</span></legend>
+              <select id="state" index="-1"> 
+                  <option ></option>
+                  <option value="DE">DE (0%)</option>
+                  <option value="MD">MD (6%)</option>
+                  <option value="VA">VA (5.3%)</option>
+              </select>
+          </fieldset>
+           <input type="button" id="calcEstimate" value="Get Your Estimate" />
+      </form>
+     
+          <section id="estimate">
+             <h4>Car Price Estimate</h4>
+             <div id="PriceEstimateSection">
+               <ul>
+                  <li id = "carMake">Make: </li>
+                  <li id = "trimPkg">Trim Package: </li>
+                  <li id = "soundPkg">Sound Package: </li>
+                  <li id = "gpsPkg">GPS Package: </li>
+                  <li id = "stateTax">Sales Tax: </li>
+                  <li id = "estPrice">Estimate Total: </li>                 
+               </ul>
+ 
+             </div>
+
+
+          </section>
+   </article>
+   <footer><p>Car Price Estimator; Salisbury, MD</p></footer>
+   <script src="estimate.js"></script>
+</body>
+</html>
